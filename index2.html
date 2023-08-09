@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness 360° - Fitness & Nutrition</title>
+
+  <!--
+    - Title image favicon
+  -->
+  <link rel="shortcut icon" href="assets/images/Title image.svg" type="image/svg+xml">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="top">
+
+  <!--
+    - # HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+      Fitness 360°
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <button class="nav-toggle-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#home" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#service" class="navbar-link" data-nav-link>Courses</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#course" class="navbar-link" data-nav-link>Shorts</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#about" class="navbar-link" data-nav-link>About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#Contact" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+
+
+        </ul>
+
+      </nav>
+
+      <button class="btn btn-primary" id="open">Profile</button>
+
+      <div class="modal-container" id="modal_container">
+        <div class="modal">
+            <h1>My Profile</h1>
+            <h3 style="text-align: left;">Name:</h3>
+            <h3 style="text-align: left;">Age:</h3>
+            <h3 style="text-align: left;">Height:</h3>
+            <h3 style="text-align: left;">Weight:</h3>
+            <h3 style="text-align: left;">Gender:</h3>
+            <h3 style="text-align: left;">Address:</h3>
+            <h3 style="text-align: left;">Email:</h3>
+            <h3 style="text-align: left;">Username:</h3>
+            <h3 style="text-align: left;">Password:</h3>
+            <br>
+            <button class="btn btn-primary" id="close">close me</button>
+        </div>
+      </div>
+
+      <script>
+        const open = document.getElementById('open');
+        const modal_container = document.getElementById('modal_container');
+        const close = document.getElementById('close');
+
+        open.addEventListener('click',()=>{
+            modal_container.classList.add('show');
+        });
+
+        close.addEventListener('click',()=>{
+            modal_container.classList.remove('show');
+        });
+
+      </script>
+
+      <p>&emsp;</p>
+      <a href="/index.html" class="btn btn-primary">Sign Out</a>
+
+      <button class="nav-toggle-btn" aria-label="open manu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+  <main>
+    <article>
+
+      <!--
+        - # HERO
+      -->
+
+      <section class="section hero" aria-label="hero" id="home" data-section>
+
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <img src="assets/images/hero-banner.jpg" class="hero-banner">
+            <div class="container">
+              <br>
+              <p class="hero-subtitle">Fitness & Nutrition</p>
+
+              <h1 class="h1 hero-title">"Nature is so smart, that it puts medicine in the food!"</h1>
+              <p class="hero-text"></p>
+
+              <br><br>
+              <a href="./Food.html" class="btn btn-secondary">Start Course</a>
+
+            </div>
+          </div>
+
+          <div class="mySlides fade">
+            <img src="assets/images/hero-banner1.jpg" class="hero-banner">
+            <div class="container">
+              <br>
+              <p class="hero-subtitle">Fitness & Nutrition</p>
+
+              <h1 class="h1 hero-title">"Fitness isn't a seasonal hobby.</h1>
+              <p class="hero-text"></p>
+              <h1 class="h1 hero-title">It's a Lifestyle!"</h1>
+              <br>
+              <a href="./Workouts.html  " class="btn btn-secondary">Start Course</a>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="radio-div">
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+
+
+      </section>
+
+
+
+
+
+      <!--
+        - # SERVICE
+      -->
+
+      <section class="section service" aria-label="service" data-section id="service">
+        <div class="container">
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="assets/images/restaurant.png" width="60" height="60" loading="lazy" alt="Food & Nutrition">
+                </div>
+
+                <h3 class="h3">
+                  <a href="/Food.html" class="card-title">Food & Nutrition</a>
+                </h3>
+
+                <p class="card-text">
+                  Explore our collection of varied healthy-n-tasty home-made recipes, specially designed to keep its nutritious value at the very best!
+                </p>
+
+                <a href="/Food.html" class="btn btn-secondary">
+                  <ion-icon name="arrow-forward"></ion-icon>
+                </a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="assets/images/excercise.svg" width="60" height="60" loading="lazy" alt="Body Workouts">
+                </div>
+
+                <h3 class="h3">
+                  <a href="/Workouts.html" class="card-title">Body Workouts</a>
+                </h3>
+
+                <p class="card-text">
+                  Explore a plethora of body workouts and fitness training, ranging from strength training to weight loss and many more...
+                </p>
+
+                <a href="/Workouts.html" class="btn btn-secondary">
+                  <ion-icon name="arrow-forward"></ion-icon>
+                </a>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+      <!--
+        - # EXPERT
+      -->
+
+      <section class="section expert" aria-label="expert" id="expert" data-section>
+        <div class="container">
+
+
+          <div class="slideshow-container">
+
+            <div class="mySlides1 fade">
+              <div class="expert-banner img-holder" style="--width: 470; --height: 580;">
+                <img src="assets/images/expert-banner.jpg" width="470" height="580" loading="lazy" alt="expert banner"
+                class="img-cover">
+                <a href="#" class="btn btn-secondary">Meet Instructor</a>
+              </div>
+
+            </div>
+
+            <div class="mySlides1 fade">
+              <div class="expert-banner img-holder" style="--width: 470; --height: 580;">
+                <img src="assets/images/expert-banner1.jpg" width="470" height="580" loading="lazy" alt="expert banner"
+                class="img-cover">
+                <a href="#" class="btn btn-secondary">Meet Instructor</a>
+              </div>
+
+            </div>
+
+            <div class="radio-div">
+              <span class="dot1"></span>
+              <span class="dot1"></span>
+            </div>
+
+          </div>
+
+          <div class="expert-content">
+
+            <p class="section-subtitle">25+ Years Of Experience</p>
+
+            <h2 class="h2 section-title">Live 1-on-1 session with experts!</h2>
+
+            <p class="section-subtitle">
+              Take advantage of special 1-on-1 session with our experts both in fitness and nutrition fields.
+            </p>
+
+            <p class="section-text">
+              We provide specific attention to each and every customer and their own, unique body types and health needs. Join now to meet and consult with our group of experienced experts.
+            </p>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!--
+        - # COURSE
+      -->
+      <section class="section course" aria-label="course" id="course" data-section>
+        <div class="container" >
+          <div class="title-wrapper">
+            <h2 class="h2 section-title">Shorts</h2>
+          </div>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="course-card" >
+                <video id="short-video" width="300" height="360" controls>
+                  <source src=".assets/shorts/v1.mp4" type="video/mp4">
+                  <source src=".assets/shorts/v1.mp4" type="video/ogg">
+                  Your browser does not support the video tag.
+                </video>
+
+              </div>
+            </li>
+            <li>
+              <div class="course-card" >
+                <video id="short-video" width="300" height="360" controls>
+                  <source src=".assets/shorts/v2.mp4" type="video/mp4">
+                  <source src=".assets/shorts/v2.mp4" type="video/ogg">
+                  Your browser does not support the video tag.
+                </video>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="course-card" >
+                <video id="short-video" width="300" height="360" controls>
+                  <source src=".assets/shorts/v3.mp4" type="video/mp4">
+                  <source src=".assets/shorts/v3.mp4" type="video/ogg">
+                  Your browser does not support the video tag.
+                </video>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="course-card" >
+                <video id="short-video" width="300" height="360" controls>
+                  <source src=".assets/shorts/v4.mp4" type="video/mp4">
+                  <source src=".assets/shorts/v4.mp4" type="video/ogg">
+                  Your browser does not support the video tag.
+                </video>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="course-card" >
+                <video id="short-video" width="300" height="360" controls>
+                  <source src=".assets/shorts/v5.mp4" type="video/mp4">
+                  <source src=".assets/shorts/v5.mp4" type="video/ogg">
+                  Your browser does not support the video tag.
+                </video>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="course-card" >
+                <video id="short-video" width="300" height="360" controls>
+                  <source src=".assets/shorts/v6.mp4" type="video/mp4">
+                  <source src=".assets/shorts/v6.mp4" type="video/ogg">
+                  Your browser does not support the video tag.
+                </video>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </section>
+
+
+
+
+
+      <!--
+        - # Blog
+      -->
+
+      <section class="section blog" aria-label="blog" id="blog" data-section>
+        <div class="container">
+
+          <div class="title-wrapper">
+            <p class="section-subtitle">Our Blog Post</p>
+
+            <h2 class="h2 section-title">Latest Articles</h2>
+          </div>
+          <span style="margin-left:43%;"><a href=blogt.html id="blogbutton0" class="btn btn-primary" style="font-size:12px;"><b>View More...</b></a></span>
+          <br>
+          <ul class="grid-list">
+
+            <li>
+              <div class="blog-card">
+
+                <div class="wrapper">
+
+                  <time class="publish-date" datetime="2022-10-18">
+                    <span class="span">18</span> Oct
+                  </time>
+
+                  <div>
+
+                    <div class="card-author">
+                      <a href="#" class="card-link">
+                        By: <span class="span">Joshua Rife</span>
+                      </a>
+                    </div>
+
+                    <ul class="card-meta-list">
+                      <li class="card-meta-item">
+                        <p class="item-text">87 Likes</p>
+                      </li>
+
+                      <li class="card-meta-item">
+                        <p class="item-text">58 Share</p>
+                      </li>
+                    </ul>
+
+                  </div>
+
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Homemade Punching Bags</a>
+                </h3>
+
+                <p class="card-text">
+                  If you’re stuck in quarantine and unsure of how to train without spending on expensive equipments, Homemade punching bags are the way to go!
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <div class="wrapper">
+
+                  <time class="publish-date" datetime="2022-10-20">
+                    <span class="span">20</span> Oct
+                  </time>
+
+                  <div>
+
+                    <div class="card-author">
+                      <a href="#" class="card-link">
+                        By: <span class="span">Rohan Sharma</span>
+                      </a>
+                    </div>
+
+                    <ul class="card-meta-list">
+                      <li class="card-meta-item">
+                        <p class="item-text">87 Likes</p>
+                      </li>
+
+                      <li class="card-meta-item">
+                        <p class="item-text">58 Share</p>
+                      </li>
+                    </ul>
+
+                  </div>
+
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">How much caffiene is too much?</a>
+                </h3>
+
+                <p class="card-text">
+                  Drinking excess caffiene definitely has several nast side effects! Here's a complete guide about drinking caffiene the right way!
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <div class="wrapper">
+
+                  <time class="publish-date" datetime="2022-10-24">
+                    <span class="span">24</span> Oct
+                  </time>
+
+                  <div>
+
+                    <div class="card-author">
+                      <a href="#" class="card-link">
+                        By: <span class="span">Jane Tamarine</span>
+                      </a>
+                    </div>
+
+                    <ul class="card-meta-list">
+                      <li class="card-meta-item">
+                        <p class="item-text">87 Likes</p>
+                      </li>
+
+                      <li class="card-meta-item">
+                        <p class="item-text">58 Share</p>
+                      </li>
+                    </ul>
+
+                  </div>
+
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Something still beats nothing!</a>
+                </h3>
+
+                <p class="card-text">
+                  Thinking what you do is not enough? Self-doubting your productivity? Here's how you don't know but you are still growing!
+                </p>
+
+              </div>
+            </li>
+
+          </ul>
+        <br><br>
+        <h4 id="sblog">
+        Share your blog with us to get featured!
+        </h4>
+        <br>
+        <a href="postblog.html" id="blogbutton" class="btn btn-primary">Share</a>
+        </div>
+      </section>
+
+
+
+
+
+      <!--
+        - # About
+      -->
+
+      <section class="section about" aria-label="about" id="about" data-section>
+
+
+          <div class="about-content">
+
+            <p class="section-subtitle">25+ Years Of Experience</p>
+
+            <h2 class="h2 section-title">About US</h2>
+
+            <p class="about-subtitle">
+              We at Fitness 360° aim to provide an easy solution for people looking for a kickstart in their step towards a healthy life style. With the possibility of physical means of fitness i.e. gyms and yoga centres etc becoming expensive day by day, our webiste provides everyone with the opportunity to become healthy at very cheaper rates. <br>
+              We attempt to build a community of health enthusiast who inspire each other and the world to take up the healthy way of living whilst also enjoying their current life at the fullest!
+              <br>
+              <br>
+              A project developed by - Ritvik, Ayush, Jashan and Akshat
+            </p>
+
+            <h3 class="about-h3">Let's live a Healthy Life!</h3>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+  <!--
+    - # FOOTER
+  -->
+
+  <footer class="footer" id="Contact">
+
+    <div class="footer-top section" data-section>
+      <div class="container">
+
+        <div class="footer-list">
+
+          <p class="footer-list-title">Subscribe to our Newsletter</p>
+
+          <p class="footer-list-text">
+            Get regular updates of our new services and offers directly in your email.
+          </p>
+
+          <form action="" class="footer-form">
+            <input type="email" name="email_address" aria-label="email" placeholder="Enter email" required
+              class="email-field">
+
+            <button type="submit" class="btn btn-secondary">Subscribe Now</button>
+          </form>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">All Courses</p>
+          </li>
+
+          <li>
+            <a href="Workouts.html" class="footer-link">Daily Exercise</a>
+          </li>
+
+          <li>
+            <a href="Workouts.html" class="footer-link">Weight Loss</a>
+          </li>
+
+          <li>
+            <a href="Workouts.html" class="footer-link">Yoga & Zumba</a>
+          </li>
+
+          <li>
+            <a href="Workouts.html" class="footer-link">Post-pregnancy workouts</a>
+          </li>
+
+          <li>
+            <a href="Workouts.html" class="footer-link">Body-specific workouts</a>
+          </li>
+
+          <li>
+            <a href="Food.html" class="footer-link">Diet-Food Recipes</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Help Links</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="blogt.html" class="footer-link">Blogs</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms & Conditions</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Customer Support</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Course FAQ’s</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Opening Hours</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Mon-Fri: 9 AM - 6 PM</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Saturday: 9 AM - 4 PM</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Sunday: Closed</a>
+          </li>
+
+          <li>
+            <p class="footer-list-title address-title">Location</p>
+          </li>
+
+          <li>
+            <address class="address">
+              Thapar Institute of Engineering and Technology, <br>
+              Bhadson Road, Patiala <br>
+              147004
+            </address>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <ul class="footer-bottom-list">
+
+          <li class="footer-bottom-item">
+            Copyright © 2022 Fitness 360. All rights reserved.
+          </li>
+
+          <li class="footer-bottom-item">
+            <a href="#" class="footer-bottom-link">Terms of Service</a>
+          </li>
+
+          <li class="footer-bottom-item">
+            <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          </li>
+
+        </ul>
+
+        <div class="social-wrapper">
+
+          <p class="social-title">Connect with us:</p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-skype"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!--
+    - # BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="assets/js/animation.js" defer></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

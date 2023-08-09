@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Share with us!</title>
+
+  <!--
+    - Title image favicon
+  -->
+  <link rel="shortcut icon" href="assets/images/Title image.svg" type="image/svg+xml">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap"
+    rel="stylesheet">
+<style>
+#password{
+
+width:30%;
+border-radius:10px;
+border: 1.6px solid;
+}
+
+#new1{
+  color:#555555;
+  display:inline;
+}
+#new2{
+  color:#555555;
+  display:inline;
+}
+
+#username{
+
+width:30%;
+border-radius:10px;
+border: 2px solid;
+}
+.topic{
+
+height:25px;
+width:142px;
+border-radius:10px;
+border: 1.6px solid;
+background-color:#2daea0;
+}
+#tarea{
+
+width:30%;
+border-radius:10px;
+border: 2px solid;
+}
+#coverp{
+
+width:30%;
+border-radius:10px;
+border: 1.6px solid;
+}
+.info{
+  width:30%;
+  border-radius:10px;
+  border: 2px solid;
+}
+ #regupdt{
+   display:inline;
+ }
+ .rad{
+   display:inline;
+   width:30%;
+   border-radius:10px;
+   border: 2px solid;
+ }
+ .marginal{
+   margin-left:100px;
+ }
+
+ #registeropt{
+   display:none;
+ }
+ #loginopt{
+   display:block;
+ }
+</style>
+
+</head>
+
+<body id="top">
+
+
+  <!--
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        Fitness 360°
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <button class="nav-toggle-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>Food & Nutrition</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>Workouts</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>Blog</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+      <button class="nav-toggle-btn" aria-label="open manu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+
+    <article>
+
+      <section class="section service" aria-label="service" data-section>
+        <div class="container"id="blogform">
+        <h3><span><button onclick="login()" id="new1">Login</button> | <button onclick="register()" id="new2"> Register</button><span></h3>
+        <br>
+        <div id="loginopt">
+        <form id="bform" name="bform" method="post" action="/login">
+        <label for "username"> <b>Username</b></label>
+
+          <input type="text" id="username" name="username">
+          <br>
+          <label for "password"><b>Password</b></label>
+
+          <input type="text" id="password" name="password">
+
+          <br>
+
+          <input type="submit" class="btn btn-primary" name="SUBMIT" id="submitt" value="Login"/>
+          <br>
+        </form>
+        </div>
+        <div id="registeropt">
+          <form id="bform" name="bform" method="post" action="/register">
+          <label for "regname"> <b>Name :</b></label>
+          <input type="text" class="info" id="regname" name="regname" style="display:inline;">
+
+          <label for "regage" class="marginal"><b>Age :</b></label>
+          <input type="text"  class="info"id="regage" name="regage"style="display:inline;">
+          <br>
+          <br>
+            <label for "reght"><b>Height (in cms) :</b></label>
+            <input style="display:inline;" type="text" class="info" id="reght" name="reght">
+
+            <label for "regwt" class="marginal"><b>Weight (in kgs) :</b></label>
+            <input style="display:inline;" type="text" class="info" id="regwt" name="regwt">
+            <br>
+            <br>
+
+            <label for "reggender" style="display:inline;"><b>Gender :</b></label>&nbsp&nbsp
+            <select id="reggender"class="topic" name="reggender" style="display:inline;">
+              <option value="M">Male</option>
+              <option value="F">Female</option>
+              <option value="O">Other</option>
+            </select>
+
+            <label for "regad" class="marginal" ><b>Address :</b></label>
+            <input style="display:inline;" type="text" class="info" id="regad" name="regad">
+            
+            <br><br>
+
+            <label for "regem"><b>E-Mail :</b></label>
+            <input style="display:inline;" type="text" class="info" id="regem" name="regem">
+
+            <br><br>
+            
+            <label for "regupdt"><b>Want updates from us?</b></label>
+            <input type="checkbox" style="border:0px;margin-right:40px;width:20px;"id="regudt" name="regupdt" class="rad"value="emailsubscribed">
+            
+            <br><br>
+
+            <label for "regusername"> <b>Username :</b></label>
+            <input style="display:inline;" type="text" class="info" id="regusername" name="regusername">
+            
+            <br><br>
+
+            <label for "regpswd"><b>Password :</b></label>
+            <input style="display:inline;" type="text" class="info" id="regpswd" name="regpswd">
+            
+            <br><br>
+
+            <input type="submit" class="btn btn-primary" name="SUBMIT" id="submitt" value="Submit"/>
+            <br>
+          </form>
+        </div>
+
+
+
+
+        </div>
+      </section>
+
+
+
+<!--
+    - # FOOTER
+  -->
+
+  <footer class="footer" id="Contact">
+
+    <div class="footer-top section" data-section>
+      <div class="container">
+
+        <div class="footer-list">
+
+          <p class="footer-list-title">Subscribe to our Newsletter</p>
+
+          <p class="footer-list-text">
+            Get regular updates of our new services and offers directly in your email.
+          </p>
+
+          <form action="" class="footer-form">
+            <input type="email" name="email_address" aria-label="email" placeholder="Enter email" required
+              class="email-field">
+
+            <button type="submit" class="btn btn-secondary">Subscribe Now</button>
+          </form>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">All Courses</p>
+          </li>
+
+          <li>
+            <a href="Workouts.html" class="footer-link">Daily Exercise</a>
+          </li>
+
+          <li>
+            <a href="Workouts.html" class="footer-link">Weight Loss</a>
+          </li>
+
+          <li>
+            <a href="Workouts.html" class="footer-link">Yoga & Zumba</a>
+          </li>
+
+          <li>
+            <a href="Workouts.html" class="footer-link">Post-pregnancy workouts</a>
+          </li>
+
+          <li>
+            <a href="Workouts.html" class="footer-link">Body-specific workouts</a>
+          </li>
+
+          <li>
+            <a href="Food.html" class="footer-link">Diet-Food Recipes</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Help Links</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="blogt.html" class="footer-link">Blogs</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms & Conditions</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Customer Support</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Course FAQ’s</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Opening Hours</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Mon-Fri: 9 AM - 6 PM</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Saturday: 9 AM - 4 PM</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Sunday: Closed</a>
+          </li>
+
+          <li>
+            <p class="footer-list-title address-title">Location</p>
+          </li>
+
+          <li>
+            <address class="address">
+              Thapar Institute of Engineering and Technology, <br>
+              Bhadson Road, Patiala <br>
+              147004
+            </address>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <ul class="footer-bottom-list">
+
+          <li class="footer-bottom-item">
+            Copyright © 2022 Fitness 360. All rights reserved.
+          </li>
+
+          <li class="footer-bottom-item">
+            <a href="#" class="footer-bottom-link">Terms of Service</a>
+          </li>
+
+          <li class="footer-bottom-item">
+            <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          </li>
+
+        </ul>
+
+        <div class="social-wrapper">
+
+          <p class="social-title">Connect with us:</p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-skype"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!--
+    - # BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+  <!--
+    - custom js link
+  -->
+  <script>
+    function login() {
+      console.log("inside");
+      var x = document.getElementById("loginopt");
+      var y = document.getElementById("registeropt");
+      y.style.display="none";
+      x.style.display = "block";
+
+
+    }
+
+    function register() {
+      console.log("inside reg");
+      var y = document.getElementById("loginopt");
+      console.log(y);
+      var x = document.getElementById("registeropt");
+      y.style.display="none";
+      x.style.display = "block";
+    }
+
+
+  </script>
+  <script src="assets/js/animation.js" defer></script>
+
+  <!--
+    - ionicon link
+  -->
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+
+</html>

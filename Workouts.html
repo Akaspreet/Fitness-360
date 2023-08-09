@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Body Workouts</title>
+
+<!--
+    - Title image favicon
+  -->
+  <link rel="shortcut icon" href="assets/images/Title image.svg" type="image/svg+xml">
+
+<!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+<!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap"
+    rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display:block;
+}
+
+/* Style the buttons */
+.button {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.button:hover {
+  background-color: #ddd;
+}
+
+.button.active {
+  background-color: #666;
+  color: white;
+}
+
+.button-nav {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  padding: 15px;
+}
+
+.zoom {
+  background-color: white;
+  transition: transform .2s;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.07); /* IE 9 */
+  -webkit-transform: scale(1.07); /* Safari 3-8 */
+  transform: scale(1.07);
+}
+
+.video-link {
+  color: var(--black-chocolate);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-600);
+  font-size: unset;
+  transition: var(--transition-1);
+}
+
+.video-link:is(:hover, :focus) { color: var(--orange-web); }
+
+
+</style>
+</head>
+<body>
+
+
+
+  <!--
+    - # HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+      Fitness 360°
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <button class="nav-toggle-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="./index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./index.html" class="navbar-link" data-nav-link>Food & Nutrition</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./index.html" class="navbar-link" data-nav-link>Workouts</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./index.html" class="navbar-link" data-nav-link>Blog</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./index.html" class="navbar-link" data-nav-link>About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./index.html" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+      <button class="nav-toggle-btn" aria-label="open manu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+<br><br><br>
+
+<!-- MAIN (Center website) -->
+
+
+
+<div class="main">
+
+  <div class="button-nav" id="myBtnContainer">
+    <button class="button active" onclick="filterSelection('all')"> Show all</button>
+    <button class="button" onclick="filterSelection('yoga')"> Yoga & Zumba</button>
+    <button class="button" onclick="filterSelection('Weight')"> Weight Loss</button>
+    <button class="button" onclick="filterSelection('pp-workout')"> Post - pregnancy</button>
+    <button class="button" onclick="filterSelection('Body')"> Body - Specific</button>
+  </div>
+
+  <!-- Portfolio Gallery Grid -->
+  <div class="video">
+    <div class="row">
+      <div class="column yoga">
+        <div class="content">
+          <a href="" class="video-link"><div class="zoom"><img src="assets/images/Zumba-1.jpg" alt="Zumba-1" style="width:100%"></div>
+          <h4>Zumba</h4></a>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+      <div class="column yoga">
+        <div class="content">
+          <a href="" class="video-link"><div class="zoom"><img src="assets/images/Zumba-2.jpg" alt="Zumba-2" style="width:100%"></div>
+          <h4>Zumba</h4></a>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+      <div class="column yoga">
+        <div class="content">
+          <a href="" class="video-link"><div class="zoom"><img src="assets/images/Yoga-1.jpg" alt="Yoga" style="width:100%"></div>
+          <h4>Yoga</h4></a>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+
+      <div class="column Weight">
+        <div class="content">
+          <a href="" class="video-link"><div class="zoom"><img src="assets/images/Weight loss-1.jpg" alt="Weight-1" style="width:100%"></div>
+          <h4>Weight Loss</h4></a>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+      <div class="column Weight">
+        <div class="content">
+          <a href="" class="video-link"><div class="zoom"><img src="assets/images/Weight loss-2.jpg" alt="Weight-2" style="width:100%"></div>
+          <h4>Weight Loss</h4></a>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+      <div class="column Weight">
+        <div class="content">
+          <a href="" class="video-link"><div class="zoom"><img src="assets/images/Weight loss-3.jpg" alt="Weight-3" style="width:100%"></div>
+          <h4>Weight Loss</h4></a>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+
+      <div class="column pp-workout">
+        <div class="content">
+          <a href="" class="video-link"><div class="zoom"><img src="assets/images/pp workout-1.jpg" alt="Post-pregnancy-1" style="width:100%"></div>
+          <h4>Post-pregnancy</h4></a>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+      <div class="column pp-workout">
+        <div class="content">
+          <a href="" class="video-link"><div class="zoom"><img src="assets/images/pp workout-2.jpg" alt="Post-pregnancy-2" style="width:100%"></div>
+          <h4>Post-pregnancy</h4></a>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+      <div class="column pp-workout">
+        <div class="content">
+          <a href="" class="video-link"><div class="zoom"><img src="assets/images/pp workout-3.jpg" alt="Post-pregnancy-3" style="width:100%"></div>
+          <h4>Post-pregnancy</h4></a>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+      <div class="column Body">
+        <div class="content">
+          <a href="" class="video-link"><div class="zoom"><img src="assets/images/Chest.jpg" alt="Chest" style="width:100%"></div>
+          <h4>Chest Workout</h4></a>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+      <div class="column Body">
+        <div class="content">
+          <a href="" class="video-link"><div class="zoom"><img src="assets/images/Shoulders.jpg" alt="Shoulders" style="width:100%"></div>
+          <h4>Shoulders Workout</h4></a>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+      <div class="column Body">
+        <div class="content">
+          <a href="" class="video-link"><div class="zoom"><img src="assets/images/Back.jpg" alt="Back" style="width:100%"></div>
+          <h4>Back Workout</h4></a>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div>
+    <!-- END GRID -->
+    </div>
+
+    <!-- END MAIN -->
+    </div>
+  </div>
+
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("button");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+</script>
+
+<!--
+    - # FOOTER
+  -->
+
+  <footer class="footer" id="Contact">
+
+    <div class="footer-top section" data-section>
+      <div class="container">
+
+        <div class="footer-list">
+
+          <p class="footer-list-title">Subscribe to our Newsletter</p>
+
+          <p class="footer-list-text">
+            Get regular updates of our new services and offers directly in your email.
+          </p>
+
+          <form action="" class="footer-form">
+            <input type="email" name="email_address" aria-label="email" placeholder="Enter email" required
+              class="email-field">
+
+            <button type="submit" class="btn btn-secondary">Subscribe Now</button>
+          </form>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">All Courses</p>
+          </li>
+
+          <li>
+            <a href="Workouts.html" class="footer-link">Daily Exercise</a>
+          </li>
+
+          <li>
+            <a href="Workouts.html" class="footer-link">Weight Loss</a>
+          </li>
+
+          <li>
+            <a href="Workouts.html" class="footer-link">Yoga & Zumba</a>
+          </li>
+
+          <li>
+            <a href="Workouts.html" class="footer-link">Post-pregnancy workouts</a>
+          </li>
+
+          <li>
+            <a href="Workouts.html" class="footer-link">Body-specific workouts</a>
+          </li>
+
+          <li>
+            <a href="Food.html" class="footer-link">Diet-Food Recipes</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Help Links</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="blogt.html" class="footer-link">Blogs</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms & Conditions</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Customer Support</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Course FAQ’s</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Opening Hours</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Mon-Fri: 9 AM - 6 PM</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Saturday: 9 AM - 4 PM</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Sunday: Closed</a>
+          </li>
+
+          <li>
+            <p class="footer-list-title address-title">Location</p>
+          </li>
+
+          <li>
+            <address class="address">
+              Thapar Institute of Engineering and Technology, <br>
+              Bhadson Road, Patiala <br>
+              147004
+            </address>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <ul class="footer-bottom-list">
+
+          <li class="footer-bottom-item">
+            Copyright © 2022 Fitness 360. All rights reserved.
+          </li>
+
+          <li class="footer-bottom-item">
+            <a href="#" class="footer-bottom-link">Terms of Service</a>
+          </li>
+
+          <li class="footer-bottom-item">
+            <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          </li>
+
+        </ul>
+
+        <div class="social-wrapper">
+
+          <p class="social-title">Connect with us:</p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-skype"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!--
+    - # BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!--
+    - custom js link
+  -->
+  <script src="assets/js/script.js" defer></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

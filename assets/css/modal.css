@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+    
+    .modal-container{
+        background-color: rgba(0,0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        opacity: 0;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition: opacity 0.3s ease;
+
+    }
+
+    .modal-container.show{
+        pointer-events: auto;
+        opacity: 1;
+    }
+
+    .modal{
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        padding: 30px 50px;
+        width: 600px;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .modal h1{
+        margin: 0;
+    }

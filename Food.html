@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Food & Nutrition</title>
+
+<!--
+    - Title image favicon
+  -->
+  <link rel="shortcut icon" href="assets/images/Title image.svg" type="image/svg+xml">
+
+<!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+<!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap"
+    rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display:block;
+}
+
+/* Style the buttons */
+.button {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.button:hover {
+  background-color: #ddd;
+}
+
+.button.active {
+  background-color: #666;
+  color: white;
+}
+
+.button-nav {
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 15px;
+}
+
+.zoom {
+  background-color: white;
+  transition: transform .2s;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.07); /* IE 9 */
+  -webkit-transform: scale(1.07); /* Safari 3-8 */
+  transform: scale(1.07);
+}
+
+.video-link {
+  color: var(--black-chocolate);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-600);
+  font-size: unset;
+  transition: var(--transition-1);
+}
+
+.video-link:is(:hover, :focus) { color: var(--orange-web); }
+
+.btn {
+    font-size: unset;
+    padding: 7px 15px;
+  }
+
+
+</style>
+</head>
+<body>
+
+
+
+  <!--
+    - # HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+      Fitness 360°
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <button class="nav-toggle-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="./index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./index.html" class="navbar-link" data-nav-link>Food & Nutrition</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./index.html" class="navbar-link" data-nav-link>Workouts</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./index.html" class="navbar-link" data-nav-link>Blog</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./index.html" class="navbar-link" data-nav-link>About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./index.html" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+      <button class="nav-toggle-btn" aria-label="open manu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+<br><br><br>
+
+<!-- MAIN (Center website) -->
+
+
+
+<div class="main">
+
+  <div class="button-nav" id="myBtnContainer">
+    <button class="btn btn-primary" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn btn-primary" onclick="filterSelection('vegan')"> Vegan Recipes</button>
+    <button class="btn btn-primary" onclick="filterSelection('vegR')"> Veg Recipes</button>
+    <button class="btn btn-primary" onclick="filterSelection('non-veg')"> Non-Veg Recipes</button>
+  </div>
+
+  <!-- Portfolio Gallery Grid -->
+  <div class="video">
+    <div class="row">
+
+      <div class="column vegan">
+        <div class="content">
+          <a href="https://www.youtube.com/watch?v=zmihwTg94g4" class="video-link">
+            <div class="zoom"><img src="assets/images/Vegan1.jpg" alt="Vegan-1" style="width: 100%"></div>
+            <h4>13 Healthy Vegan Recipes</h4>
+          </a>
+          <p>if you’re looking for exciting new easy vegan meals check out these 13 healthy vegan recipes for weight loss to Include in
+            Your plant based and Vegan Diet.
+          </p>
+        </div>
+      </div>
+
+      <div class="column vegan">
+        <div class="content">
+          <a href="https://www.youtube.com/watch?v=XHfiWYcYpJk" class="video-link">
+            <div class="zoom"><img src="assets/images/Vegan2.jpg" alt="Vegan-2" style="width: 100%"></div>
+            <h4>5 Meals I Eat Every Week</h4>
+          </a>
+          <p>Here are 5 easy, healthy, budget-friendly, and customizable meals that I eat every week as a vegan! Tell me your favorite
+            weeknight staple meal in the comments below :)
+          </p>
+        </div>
+      </div>
+
+      <div class="column vegan">
+        <div class="content">
+          <a href="https://www.youtube.com/watch?v=d58QpQhdE9o" class="video-link">
+            <div class="zoom"><img src="assets/images/Vegan3.jpg" alt="Vegan-3" style="width: 100%"></div>
+            <h4>20-Minute Vegan Meals</h4>
+          </a>
+          <p>20-minute vegan meals that don't sacrifice on flavor!. Tell me your favorite weeknight staple meal in the comments below :).
+            Try it fast. And do suggest your friends too.
+          </p>
+        </div>
+      </div>
+
+      <div class="column vegR">
+        <div class="content">
+          <a href="https://www.youtube.com/watch?v=yc8nkYgA4AM" class="video-link">
+            <div class="zoom"><img src="assets/images/Veg1.jpg" alt="VegR-1" style="width: 100%"></div>
+            <h4>5 Healthy Vegetarian Recipes</h4>
+          </a>
+          <p>Whether you’ve been a practicing vegan diet for a while now or have recently decided to follow a vegetarian diet, know that
+            just like any diet, there are healthy as well as unhealthy ways to nourish.
+          </p>
+        </div>
+      </div>
+
+      <div class="column vegR">
+        <div class="content">
+          <a href="https://www.youtube.com/watch?v=PTS4tSmp5KA" class="video-link">
+            <div class="zoom"><img src="assets/images/Veg2.jpg" alt="VegR-2" style="width: 100%"></div>
+            <h4>Healthy Vegetable Recipes For Weight Loss</h4>
+          </a>
+          <p>Explore our easy and tasty healthy diet recipes for weight loss, the "vegetarian edition". So Let your taste buds have fun and make yourself fit and healthy!</p>
+        </div>
+      </div>
+
+      <div class="column vegR">
+        <div class="content">
+          <a href="https://www.youtube.com/watch?v=nzNQ5lTmg1Q" class="video-link">
+            <div class="zoom"><img src="assets/images/Veg3.jpg" alt="VegR-3" style="width: 100%"></div>
+            <h4>Protein Salad recipe</h4>
+          </a>
+          <p>healthy Veg Protein Salad made with all vegetarian items. Used Cucumber Carrot Onion Tomato boiled White chana boiled kidney
+            beans salad leafs and lemon juice Black Pepper with salt.
+          </p>
+        </div>
+      </div>
+
+      <div class="column non-veg">
+        <div class="content">
+          <a href="https://www.youtube.com/watch?v=rNuqNdJd54E" class="video-link">
+            <div class="zoom"><img src="assets/images/Non-veg1.jpg" alt="NonVeg-1" style="width: 100%"></div>
+            <h4>Healthy Chicken Recipes</h4></a>
+          <p>Looking for exciting new meals and ideas to incorporate into your diet ?check out these healthy chicken recipes for weight
+            loss to Include in your lunch and dinner.
+          </p>
+        </div>
+      </div>
+
+      <div class="column non-veg">
+        <div class="content">
+          <a href="https://www.youtube.com/watch?v=0rnhpKtyL4Y" class="video-link">
+            <div class="zoom"><img src="assets/images/Non-veg2.jpg" alt="NonVeg-2" style="width: 100%"></div>
+            <h4>How To Cook Oil Free Chicken</h4>
+          </a>
+          <p>Oil-free Chicken which is a perfect and nutritious option for your diet. Make Oil-free Chicken using the healthy
+            home ingredients that keep your health as well as taste satisfied.
+          </p>
+        </div>
+      </div>
+
+      <div class="column non-veg">
+        <div class="content">
+          <a href="https://www.youtube.com/watch?v=oRhlnJNdIXE" class="video-link">
+            <div class="zoom"><img src="assets/images/Non-veg3.jpg" alt="NonVeg-3" style="width: 100%"></div>
+            <h4>Top 10 Best Non Veg Diet Recipes</h4>
+          </a>
+          <p>Want to lose weight but dont want to snack those boring vegetarian foods? Explore our tasty but healthy non-veg food are also perfect for helping you lose weight. </p>
+        </div>
+      </div>
+
+      <!-- END GRID -->
+    </div>
+
+    <!-- END MAIN -->
+  </div>
+</div>
+
+
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+</script>
+
+<!--
+    - # FOOTER
+  -->
+
+  <footer class="footer" id="Contact">
+
+    <div class="footer-top section" data-section>
+      <div class="container">
+
+        <div class="footer-list">
+
+          <p class="footer-list-title">Subscribe to our Newsletter</p>
+
+          <p class="footer-list-text">
+            Get regular updates of our new services and offers directly in your email.
+          </p>
+
+          <form action="" class="footer-form">
+            <input type="email" name="email_address" aria-label="email" placeholder="Enter email" required
+              class="email-field">
+
+            <button type="submit" class="btn btn-secondary">Subscribe Now</button>
+          </form>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">All Courses</p>
+          </li>
+
+          <li>
+            <a href="Workouts.html" class="footer-link">Daily Exercise</a>
+          </li>
+
+          <li>
+            <a href="Workouts.html" class="footer-link">Weight Loss</a>
+          </li>
+
+          <li>
+            <a href="Workouts.html" class="footer-link">Yoga & Zumba</a>
+          </li>
+
+          <li>
+            <a href="Workouts.html" class="footer-link">Post-pregnancy workouts</a>
+          </li>
+
+          <li>
+            <a href="Workouts.html" class="footer-link">Body-specific workouts</a>
+          </li>
+
+          <li>
+            <a href="Food.html" class="footer-link">Diet-Food Recipes</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Help Links</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="blogt.html" class="footer-link">Blogs</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms & Conditions</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Customer Support</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Course FAQ’s</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Opening Hours</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Mon-Fri: 9 AM - 6 PM</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Saturday: 9 AM - 4 PM</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Sunday: Closed</a>
+          </li>
+
+          <li>
+            <p class="footer-list-title address-title">Location</p>
+          </li>
+
+          <li>
+            <address class="address">
+              Thapar Institute of Engineering and Technology, <br>
+              Bhadson Road, Patiala <br>
+              147004
+            </address>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <ul class="footer-bottom-list">
+
+          <li class="footer-bottom-item">
+            Copyright © 2022 Fitness 360. All rights reserved.
+          </li>
+
+          <li class="footer-bottom-item">
+            <a href="#" class="footer-bottom-link">Terms of Service</a>
+          </li>
+
+          <li class="footer-bottom-item">
+            <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          </li>
+
+        </ul>
+
+        <div class="social-wrapper">
+
+          <p class="social-title">Connect with us:</p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-skype"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!--
+    - # BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!--
+    - custom js link
+  -->
+  <script src="assets/js/script.js" defer></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
